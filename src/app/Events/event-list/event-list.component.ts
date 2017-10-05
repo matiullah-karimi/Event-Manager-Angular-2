@@ -1,3 +1,4 @@
+import { AuthService } from './../../user/user.service';
 import { IEvent } from './../shared/event.model';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from './../../common/toastr.service';
@@ -14,7 +15,7 @@ export class EventListComponent implements OnInit {
   events:IEvent[]
 
   constructor(private eventService: EventsService, private toaster: ToastrService,
-  private route: ActivatedRoute) {
+  private route: ActivatedRoute, private auth: AuthService) {
    }
 
    OnButtonClick(data) {
@@ -24,7 +25,7 @@ export class EventListComponent implements OnInit {
       // this.eventService.getEvents().subscribe(events => {
       //   this.events = events;
       // })
-
+      
       this.events = this.route.snapshot.data['events']
   }
 

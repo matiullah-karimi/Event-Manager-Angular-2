@@ -4,6 +4,7 @@ import { ToastrService } from './common/toastr.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EventListComponent } from './Events/event-list/event-list.component';
@@ -30,7 +31,9 @@ import { EventRouteActivator } from './Events/event-detail/event-route-activator
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     EventsService,

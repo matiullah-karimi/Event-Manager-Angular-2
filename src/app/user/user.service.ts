@@ -10,7 +10,7 @@ export class AuthService{
             id: 1,
             firstName: 'John',
             lastName: 'Papa',
-            userName: 'John Papa'
+            userName: username
         }
     }
 
