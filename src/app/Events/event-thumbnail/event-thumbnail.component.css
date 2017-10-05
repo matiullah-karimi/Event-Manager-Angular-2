@@ -1,0 +1,14 @@
+.green {
+    color: green;
+}
+
+.bold {
+    font-weight: bold;
+}
+div.hoverwell{
+    cursor: pointer; 
+}
+.hoverwell:hover{
+    background-color: green;
+    color: white;
+}
